@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="in.www.dryrapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_enter_details"
+        android:name="in.www.dryrapp.ui.gallery.Enter_DetailsFragment"
+        android:label="@string/menu_enter_details"
+        tools:layout="@layout/fragment_enter_details" />
+
+    <fragment
+        android:id="@+id/nav_order_overview"
+        android:name="in.www.dryrapp.ui.slideshow.OrderOverviewFragment"
+        android:label="@string/menu_order_overview"
+        tools:layout="@layout/fragment_slideshow" />
+
+   <!-- <fragment
+        android:id="@+id/nav_tools"
+        android:name="in.www.dryrapp.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_services" />-->
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="in.www.dryrapp.ui.share.ServicesFragment"
+        android:label="@string/menu_services"
+        tools:layout="@layout/fragment_order_overview" />
+
+    <fragment
+        android:id="@+id/nav_driver_details"
+        android:name="in.www.dryrapp.ui.send.DriverDetailsFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_driver_details" />
+</navigation>
