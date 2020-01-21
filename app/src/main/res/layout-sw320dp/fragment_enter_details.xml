@@ -69,6 +69,7 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_weight="0.2"
             android:layout_width="match_parent"
@@ -283,6 +284,8 @@
 
 
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_weight="0.2"
             android:layout_width="match_parent"
@@ -345,6 +348,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_weight="0.2"
             android:layout_width="match_parent"

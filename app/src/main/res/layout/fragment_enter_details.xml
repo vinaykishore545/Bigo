@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:id="@+id/container1"
     android:background="#fafafa"
     android:layout_height="match_parent">
     <LinearLayout
@@ -244,13 +245,15 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             tools:ignore="UselessParent">
-                            <TextView
+                            <EditText
+                                android:background="@null"
                                 android:fontFamily="sans-serif-condensed"
                                 android:layout_marginStart="@dimen/_12sdp"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="@dimen/_14sdp"
+                                android:hint="carName"
                                 android:layout_gravity="center"
-                                android:text="@string/car_name"
+                                android:id="@+id/carname"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
@@ -285,13 +288,15 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             tools:ignore="UselessParent">
-                            <TextView
+                            <EditText
+                                android:background="@null"
                                 android:fontFamily="sans-serif-condensed"
                                 android:layout_marginStart="@dimen/_12sdp"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="@dimen/_14sdp"
                                 android:layout_gravity="center"
-                                android:text="@string/car_number"
+                                android:hint="car number"
+                                android:id="@+id/carnumber"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
@@ -326,13 +331,15 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             tools:ignore="UselessParent">
-                            <TextView
+                            <EditText
+                                android:background="@null"
                                 android:fontFamily="sans-serif-condensed"
                                 android:layout_marginStart="@dimen/_12sdp"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="@dimen/_14sdp"
                                 android:layout_gravity="center"
-                                android:text="@string/car_location"
+                                android:id="@+id/location"
+                                android:hint="@string/car_location"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
@@ -405,7 +412,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:text="enter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         tools:ignore="HardcodedText" />
 
 

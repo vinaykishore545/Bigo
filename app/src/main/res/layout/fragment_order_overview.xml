@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/fragment_container"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
@@ -31,6 +32,7 @@
                 android:layout_width="@dimen/_10sdp"
                 android:layout_height="@dimen/_10sdp"/>
             <TextView
+                android:id="@+id/cost"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:text="40"
                 android:textSize="@dimen/_15sdp"
@@ -58,7 +60,7 @@
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_height="@dimen/_300sdp">
+        android:layout_height="@dimen/_350sdp">
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="@dimen/_5sdp"
             app:cardUseCompatPadding="true"
@@ -100,6 +102,7 @@
 
 
                         <TextView
+                            android:id="@+id/date"
                             android:textColor="#000"
                             android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_gravity="center"
@@ -152,6 +155,7 @@
 
 
                         <TextView
+                            android:id="@+id/time"
                             android:textColor="#000"
                             android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_gravity="center"
@@ -203,6 +207,7 @@
 
 
                         <TextView
+                            android:id="@+id/hour"
                             android:textColor="#000"
                             android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_gravity="center"
@@ -254,6 +259,7 @@
 
 
                         <TextView
+                            android:id="@+id/address"
                             android:textColor="#000"
                             android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_gravity="center"
@@ -304,12 +310,115 @@
 
 
                         <TextView
+                            android:id="@+id/type"
                             android:textColor="#000"
                             android:layout_marginEnd="@dimen/_15sdp"
                             android:layout_gravity="center"
                             android:textSize="@dimen/_13sdp"
                             android:layout_marginStart="@dimen/_15sdp"
                             android:text="@string/automatic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="car number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/car_number"
+                            android:textColor="#000"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="@string/date_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="car name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/car_name"
+                            android:textColor="#000"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="@string/date_order"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
@@ -341,11 +450,37 @@
 
     </LinearLayout>
     <LinearLayout
-        android:layout_weight="0.1"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="@dimen/_20sdp">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/carpick"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/carup"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/idser"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <Button
+        android:id="@+id/submit"
         android:background="@drawable/round_button"
         android:layout_gravity="center_horizontal|center"
         android:text="@string/submit"
