@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/_20sdp"
+       android:gravity="center"
+        android:id="@+id/dia"
+        android:background="@drawable/dialogshap"
+        android:textColor="#000"
+        android:text="your booking is confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:background="@drawable/dialog2"
+            android:id="@+id/yes"
+            android:text="yes"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+

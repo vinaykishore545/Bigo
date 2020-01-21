@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+   <!-- <EditText
+
+        android:id="@+id/name"
+        android:textColor="#000"
+        android:drawablePadding="@dimen/_5sdp"
+        android:hint="name"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingStart="@dimen/_60sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/button"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+    <EditText
+
+        android:id="@+id/email"
+        android:textColor="#000"
+        android:drawablePadding="@dimen/_5sdp"
+        android:hint="email"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingStart="@dimen/_60sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/button"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+    <EditText
+        android:inputType="number"
+        android:id="@+id/mobile"
+        android:textColor="#000"
+        android:drawablePadding="@dimen/_5sdp"
+        android:hint="Mobile Number"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingStart="@dimen/_60sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/button"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    <EditText
+
+        android:id="@+id/password"
+        android:textColor="#000"
+        android:drawablePadding="@dimen/_5sdp"
+        android:hint="password"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingStart="@dimen/_60sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/button"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    <EditText
+
+        android:id="@+id/fci"
+        android:textColor="#000"
+        android:drawablePadding="@dimen/_5sdp"
+        android:hint="fcmid"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingStart="@dimen/_60sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/button"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/type"
+        android:textColor="#000"
+        android:drawablePadding="@dimen/_5sdp"
+        android:hint="type"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingStart="@dimen/_60sdp"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/button"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeColor="#009a43"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        style="@style/LoginTextInputLayoutStyle"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="name"
+            android:textSize="20dp"
+            android:id="@+id/name"
+            android:textStyle="bold"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeColor="#009a43"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        style="@style/LoginTextInputLayoutStyle"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="email"
+            android:textSize="20dp"
+            android:id="@+id/email"
+            android:textStyle="bold"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeColor="#009a43"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        style="@style/LoginTextInputLayoutStyle"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="mobile"
+            android:textSize="20dp"
+            android:id="@+id/mobile"
+            android:textStyle="bold"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeColor="#009a43"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        style="@style/LoginTextInputLayoutStyle"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="passsword"
+            android:textSize="20dp"
+            android:id="@+id/password"
+            android:textStyle="bold"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeColor="#009a43"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        style="@style/LoginTextInputLayoutStyle"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="fcmid"
+            android:textSize="20dp"
+            android:id="@+id/fci"
+            android:textStyle="bold"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeColor="#009a43"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        style="@style/LoginTextInputLayoutStyle"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        android:layout_height="60dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="type"
+            android:textSize="20dp"
+            android:id="@+id/type"
+            android:textStyle="bold"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+   <!-- <Button
+        android:id="@+id/ok"
+        android:textSize="@dimen/_15sdp"
+        android:text="signup"
+        android:background="@drawable/button1"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"/>-->
+    <com.google.android.material.button.MaterialButton
+        android:background="@drawable/round_button"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        style="@style/Button"
+        android:id="@+id/ok"
+        android:textColor="#fff"
+        android:text="signup"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</LinearLayout>
