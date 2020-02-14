@@ -7,9 +7,11 @@ import com.google.android.material.snackbar.Snackbar;
 
 import android.view.MenuItem;
 import android.view.View;
-
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -24,6 +26,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import in.www.dryrapp.ui.gallery.Enter_DetailsFragment;
 import in.www.dryrapp.ui.home.HomeFragment;
@@ -41,15 +45,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-       /* FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -85,7 +80,15 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         if(id==R.id.nav_enter_details)
         {
 
-            fragmentManager.beginTransaction().replace(R.id.container,new Enter_DetailsFragment()).commit();
+            FragmentManager fragmentManager1 =getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction=fragmentManager1.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.layout_animation_down_to_up,R.anim.layout_animation_down_to_up);
+
+            fragmentTransaction.replace(R.id.container,new Enter_DetailsFragment());
+            fragmentTransaction.commit();
+           /* fragmentManager.beginTransaction().replace(R.id.container,new Enter_DetailsFragment()).setCustomAnimations(R.anim.layout_animation_left_to_right,R.anim.layout_animation_left_to_right);
+*/
+
         }
         if(id==R.id.nav_driver_details)
         {

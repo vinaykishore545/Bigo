@@ -64,9 +64,6 @@ public class BookingRecycler extends RecyclerView.Adapter<BookingRecycler.MyView
             pickup=itemView.findViewById(R.id.pickup_booking);
             price=itemView.findViewById(R.id.booking_price);
             servid=itemView.findViewById(R.id.booking_serid);
-
-
-
         }
     }
 }

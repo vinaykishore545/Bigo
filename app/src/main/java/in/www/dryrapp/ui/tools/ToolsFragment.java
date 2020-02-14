@@ -31,16 +31,13 @@ import retrofit2.Response;
 import retrofit2.http.Url;
 
 public class ToolsFragment extends Fragment {
-
     private ToolsViewModel toolsViewModel;
     private final String Url="order/booking";
     String  st7,stid;
     private Api apiInterface;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
+        toolsViewModel = ViewModelProviders.of(this).get(ToolsViewModel.class);
         View root = inflater.inflate(R.layout.driverid, container, false);
         TextView tx=(TextView)root.findViewById(R.id.t2);
         tx.setText(OrderOverviewFragment.getText());
@@ -50,24 +47,6 @@ public class ToolsFragment extends Fragment {
         tx1.setText(OrderOverviewFragment.getText());
         stid=tx1.getText().toString().trim();
        String sr=Url+st7;
-      /*  Api service = ApiClient.getClient().create(Api.class);
-        Call<List<DriverId>> userCall = service.creatDriver(sr,stid);
-        userCall.enqueue(new Callback<List<DriverId>>() {
-            @Override
-            public void onResponse(Call<List<DriverId>> call, Response<List<DriverId>> response) {
-                Toast.makeText(getContext(),String.valueOf(response.body().get(0).getResponse()), Toast.LENGTH_SHORT).show();
-
-
-            }
-
-            @Override
-            public void onFailure(Call<List<DriverId>> call, Throwable t) {
-
-            }
-        });
-*/
-
-
         return root;
     }
 }

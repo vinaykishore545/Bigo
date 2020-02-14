@@ -55,7 +55,6 @@ public class Recycler extends RecyclerView.Adapter<Recycler.MyViewHolder> {
                 Bundle bundle= new Bundle();
                 bundle.putString("it1",tx);
                 Enter_DetailsFragment enter_detailsFragment=new Enter_DetailsFragment();
-
                 FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
                 manager.beginTransaction().add(R.id.container,enter_detailsFragment).commit();
                 enter_detailsFragment.setArguments(bundle);

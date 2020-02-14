@@ -8,23 +8,47 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
     <LinearLayout
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_weight="1"
+        android:layout_weight="0.4"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="0.4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
         tools:ignore="UseCompoundDrawables">
-        <ImageView
+        <RelativeLayout
+            android:orientation="vertical"
+            android:gravity="center"
 
-            android:src="@drawable/dry_icon"
-            android:layout_gravity="center"
-            android:layout_width="@dimen/_250sdp"
-            android:layout_height="@dimen/_100sdp"
-            tools:ignore="ContentDescription" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+
+                android:src="@drawable/mark3"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"/>
+
+            <ImageView
+             android:layout_centerHorizontal="true"
+                android:id="@+id/imghandle"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/driver_handle" />
 
 
+        </RelativeLayout>
+        <LinearLayout
 
 
+            android:layout_width="@dimen/_120sdp"
+            android:background="@drawable/mark2"
+            android:layout_height="@dimen/_60sdp"/>
 
     </LinearLayout>
     <LinearLayout
@@ -32,38 +56,6 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-
-       <!-- <EditText
-            android:inputType="number"
-            android:id="@+id/mobile"
-            android:textColor="#000"
-            android:drawablePadding="@dimen/_5sdp"
-            android:hint="Mobile Number"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:paddingStart="@dimen/_60sdp"
-            android:textSize="@dimen/_15sdp"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/button"
-            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
-        <EditText
-            android:id="@+id/password"
-
-            android:textColor="#000"
-            android:hint="password"
-            android:drawablePadding="@dimen/_10ssp"
-            android:paddingStart="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:layout_width="match_parent"
-            android:textSize="@dimen/_15sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/button"
-            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:focusable="true"
@@ -79,18 +71,18 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:hint="Mobile Number"
-                android:textSize="13dp"
-
+                android:textSize="15sp"
                 android:id="@+id/mobile"
                 android:textStyle="bold"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                tools:ignore="HardcodedText" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:focusable="true"
             app:boxStrokeWidth="4dp"
             app:boxStrokeColor="#009a43"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             style="@style/LoginTextInputLayoutStyle"
@@ -99,61 +91,45 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:hint="Passsword"
-                android:textSize="13dp"
+                android:textSize="15sp"
                 android:id="@+id/password"
                 android:textStyle="bold"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                tools:ignore="HardcodedText" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
-        android:layout_weight="1"
+        android:layout_weight="0.6"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-        <!--<Button
-           android:layout_marginStart="10dp"
-            android:background="@drawable/button1"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:layout_gravity="center"
-            android:textSize="@dimen/_15sdp"
-            android:text="sign in"
-            android:id="@+id/sign"
-            android:drawablePadding="@dimen/_30sdp"
-            android:layout_width="wrap_content"
-            android:paddingStart="@dimen/_10sdp"
-            android:paddingEnd="@dimen/_30sdp"
-            android:layout_height="wrap_content"
-            tools:ignore="HardcodedText,RtlHardcoded" />-->
         <com.google.android.material.button.MaterialButton
             android:background="@drawable/round_button"
             android:layout_marginTop="30dp"
-            android:textStyle="italic"
-            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
             style="@style/Button"
             android:id="@+id/sign"
             android:textColor="#fff"
-            android:text="sign"
+            android:text="sign in"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_width="match_parent"
-            android:layout_height="60dp"/>
-
+            android:layout_height="60dp"
+            tools:ignore="HardcodedText" />
         <TextView
             android:textColor="#000"
             android:textSize="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_10ssp"
             android:layout_gravity="center"
-            android:text="create a account? sign up?"
+            android:text="Create a account? sign up"
             android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:ignore="HardcodedText" />
-
-
     </LinearLayout>
-
-
+    <LinearLayout
+        android:layout_weight="0.6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
 </LinearLayout>

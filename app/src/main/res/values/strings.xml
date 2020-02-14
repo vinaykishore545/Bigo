@@ -34,33 +34,25 @@
     <string name="ampeert">Ampeert</string>
     <string name="automatic">Atomatic</string>
     <string name="date1">Date:</string>
-
     <string name="total_price">Total Price</string>
     <string name="submit">Submit</string>
     <string name="personal_hourly">Personal Hourly Driver</string>
     <string name="driver_team_event">Driver Team For Event</string>
-
     <string name="car_pick_up">Car Pick UP</string>
     <string name="select">Select</string>
     <string name="personal_use">Personal Use</string>
     <string name="for_Bussiness">For Bussiness</string>
-
     <string name="number">24</string>
     <string name="per_hour">Per Hour</string>
-
     <string name="to">To</string>
     <string name="from">From</string>
     <string name="current_location">Current Location</string>
     <string name="madhapur">Madhapur,Hyderbad</string>
-
-
     <string name="view_more">View More</string>
     <string name="title_activity_maps">Map</string>
-
     <string-array name="car_type">
         <item>Select car Type</item>
         <item>Automobile</item>
         <item>manual</item>
     </string-array>
-
 </resources>

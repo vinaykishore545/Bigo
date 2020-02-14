@@ -3,13 +3,15 @@ package in.www.dryrapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class Splash extends AppCompatActivity {
     private static int SPLASH_SCREEN_TIME_OUT=5000;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,9 +29,14 @@ public class Splash extends AppCompatActivity {
                 startActivity(i);
                 //invoke the SecondActivity.
 
+
                 finish();
                 //the current activity will get finished.
             }
         }, SPLASH_SCREEN_TIME_OUT);
+
+
+
+
     }
 }

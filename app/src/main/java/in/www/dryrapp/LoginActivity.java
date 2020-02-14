@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +34,10 @@ public class LoginActivity extends AppCompatActivity {
         TextView register=findViewById(R.id.register);
         final EditText mobileF=findViewById(R.id.mobile);
         final EditText passwordF=findViewById(R.id.password);
+        ImageView img = (ImageView)findViewById(R.id.imghandle);
+        Animation aniRotate = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate);
+        img.startAnimation(aniRotate);
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,28 +53,40 @@ public class LoginActivity extends AppCompatActivity {
                 progressDialog.setMessage("please wait");
                 progressDialog.setCancelable(false);
                 progressDialog.show();
-                String mobile=mobileF.getText().toString().trim();
+                final String mobile=mobileF.getText().toString().trim();
                 String password=passwordF.getText().toString().trim();
                 if (mobile.isEmpty()) {
                     mobileF.setError("mobile is required");
                     mobileF.requestFocus();
                     return;
                 }
+                else {
+                    progressDialog.dismiss();
+                }
                 if (password.isEmpty()) {
                     passwordF.setError("password is required");
                     passwordF.requestFocus();
                     return;
+                }
+                else {
+                    progressDialog.dismiss();
                 }
                 if (password.length() < 4) {
                     passwordF.setError("password  alteast six character is required");
                     passwordF.requestFocus();
                     return;
                 }
+                else {
+                    progressDialog.dismiss();
+                }
+
                 Api service = ApiClient.getClient().create(Api.class);
                 Call<List<Login>> userCall = service.creatLogin(mobile,password);
                 userCall.enqueue(new Callback<List<Login>>() {
+
                     @Override
                     public void onResponse(Call<List<Login>> call, Response<List<Login>> response) {
+
                         if(response.body().get(0).getResponse()==1)
                         {
                             progressDialog.dismiss();
@@ -73,6 +94,11 @@ public class LoginActivity extends AppCompatActivity {
                             Intent i =new Intent(LoginActivity.this,MainActivity.class);
                             startActivity(i);
                             Toast.makeText(getApplicationContext(),"User Sucessfully login",Toast.LENGTH_LONG).show();
+                           /* SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("key_id",mobile);*/
+
+
                         }
                         else {
                             Toast.makeText(getApplicationContext(),"User not login",Toast.LENGTH_LONG).show();
@@ -87,6 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<List<Login>> call, Throwable t) {
+                        progressDialog.dismiss();
                         Toast.makeText(LoginActivity.this, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }

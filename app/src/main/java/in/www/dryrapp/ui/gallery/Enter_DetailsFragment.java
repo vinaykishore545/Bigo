@@ -1,11 +1,14 @@
 package in.www.dryrapp.ui.gallery;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -19,19 +22,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
-import androidx.annotation.Nullable;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-
 import java.util.Calendar;
-import java.util.InputMismatchException;
 
+import in.www.dryrapp.MainActivity;
 import in.www.dryrapp.R;
 import in.www.dryrapp.ui.slideshow.OrderOverviewFragment;
 
@@ -51,6 +51,7 @@ public class Enter_DetailsFragment extends Fragment implements DatePickerDialog.
 
 
     ArrayAdapter<CharSequence> adapter;
+    @SuppressLint("ResourceType")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
@@ -67,10 +68,19 @@ public class Enter_DetailsFragment extends Fragment implements DatePickerDialog.
         pick1=(EditText)root.findViewById(R.id.pic);
         drop1=(EditText)root.findViewById(R.id.drop);
 
+           try {
+               Bundle bundle= getArguments();
+               name =bundle.getString("it1");
+               Toast.makeText(getContext(),name,Toast.LENGTH_SHORT).show();
+           }
+           catch (Exception e)
+           {
+              Toast.makeText(getContext(),"mesage iw sornd ",Toast.LENGTH_SHORT).show();
+           }
 
-        Bundle bundle= getArguments();
+        /*Bundle bundle= getArguments();
         name =bundle.getString("it1");
-        Toast.makeText(getContext(),name,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(),name,Toast.LENGTH_SHORT).show();*/
 
         currentTime = Calendar.getInstance();
         hour = currentTime.get(Calendar.HOUR_OF_DAY);
@@ -321,5 +331,12 @@ public class Enter_DetailsFragment extends Fragment implements DatePickerDialog.
         orderOverviewFragment.setArguments(bundle);
         FragmentManager manager = getFragmentManager();
         manager.beginTransaction().replace(R.id.container,orderOverviewFragment).commit();
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+        inflater.inflate(R.menu.nav_home, menu);
+
+        super.onCreateOptionsMenu(menu, inflater);
     }
 }
